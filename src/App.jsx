@@ -11,6 +11,7 @@ function App() {
         <h1>QR Code Reader</h1>    
         <div style={{border: '1px solid red'}}>
         <QrReader
+        constraints={{facingMode: 'user'}}
         onResult={(result, error) => {
           if (result) {
             setData(result?.text);
